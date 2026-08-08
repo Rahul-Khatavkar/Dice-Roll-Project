@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Code Reference from - https://codingartistweb.com/2021/04/roll-the-dice-javascript-dice-roll/ -->
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Roll The Dice</title>
-    <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="./style.css">
-    <style>
-        h1{
-            text-align: center;
-        }
-        span{
-            color: #FF6347;
-            text-decoration: solid;
-            
-            }
-        
-    </style>
 </head>
+
 <body>
-    <h1><span>Try your Luck. Roll the Dice</span></h1>
-<p class="subtitle">Every roll is a new chance.</p>
-    <div class="container">
-        <div class="dice-wrapper">
-            <img  id="die-1">
-            <img  id="die-2">
+
+    <div class="game">
+
+        <h1>Try your Luck. Roll the Dice</h1>
+
+        <p class="subtitle">Every roll is a new chance.</p>
+
+        <div class="container">
+
+            <div class="dice-wrapper">
+                <img id="die-1" src="./images/dice-01.svg" alt="Dice 1">
+                <img id="die-2" src="./images/dice-01.svg" alt="Dice 2">
+            </div>
+
+            <p id="total">You rolled 2</p>
+
+            <button onclick="roll()">ROLL THE DICE</button>
+
         </div>
-        <p id="total"></p>
-        <button onclick="roll()">ROLL THE DICE</button>
+
     </div>
-   <script src="./script.js"></script>
+
+    <script src="./script.js"></script>
+
 </body>
+
 </html>
