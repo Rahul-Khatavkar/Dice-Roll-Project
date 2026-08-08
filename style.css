@@ -1,17 +1,33 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #ffd43b, #ff8c00, #ff5722);
-    color: #4a1c00;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 255, 255, 0.25),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffd43b 0%,
+            #ffad1f 45%,
+            #ff6b1a 100%
+        );
+
+    color: #2b1600;
 }
 
 .game {
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,11 +35,14 @@ body {
     padding-top: 70px;
 }
 
+/* Heading */
+
 h1 {
     font-size: 38px;
     font-weight: 700;
     color: #7a2500;
     text-align: center;
+    margin: 0;
 }
 
 .subtitle {
@@ -35,19 +54,28 @@ h1 {
     text-align: center;
 }
 
+/* Game Card */
+
 .container {
     width: 420px;
     max-width: 90%;
     padding: 40px 35px;
-    background: #ffffff;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 2px solid rgba(255, 255, 255, 0.7);
     border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 20px 45px rgba(100, 40, 0, 0.3);
+
+    box-shadow:
+        0 20px 45px rgba(120, 50, 0, 0.25),
+        0 5px 15px rgba(120, 50, 0, 0.12);
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* Dice */
 
 .dice-wrapper {
     width: 100%;
@@ -62,10 +90,16 @@ h1 {
     width: 110px;
     height: 110px;
     padding: 8px;
+
     background: #ffffff;
+
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(100, 40, 0, 0.15);
+
+    box-shadow:
+        0 8px 20px rgba(120, 50, 0, 0.15);
 }
+
+/* Result */
 
 #total {
     font-size: 20px;
@@ -74,41 +108,58 @@ h1 {
     margin: 20px 0 25px;
 }
 
+/* Button */
+
 button {
     width: 175px;
     padding: 14px 0;
+
     border: none;
     outline: none;
 
-    background: linear-gradient(135deg, #ffb300, #ff6b00);
+    background: linear-gradient(
+        135deg,
+        #ffb300,
+        #ff6b00
+    );
 
     color: #ffffff;
+
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 700;
+
     letter-spacing: 1px;
 
     border-radius: 10px;
+
     cursor: pointer;
 
-    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.35);
+    box-shadow:
+        0 8px 20px rgba(255, 107, 0, 0.3);
+
     transition: 0.25s ease;
 }
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(255, 107, 0, 0.45);
+
+    box-shadow:
+        0 12px 25px rgba(255, 107, 0, 0.4);
 }
 
 button:active {
     transform: translateY(1px);
 }
 
+/* Dice Animation */
+
 .shake {
     animation: shake 0.5s infinite;
 }
 
 @keyframes shake {
+
     0% {
         transform: rotate(30deg) scale(1.05);
     }
@@ -121,6 +172,8 @@ button:active {
         transform: rotate(30deg) scale(1.05);
     }
 }
+
+/* Mobile */
 
 @media screen and (max-width: 500px) {
 
