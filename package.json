@@ -1,0 +1,15 @@
+{
+  "name": "dice-project",
+  "version": "1.0.0",
+  "description": "This is a simple Dice Rolling project",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "ValarMorghulis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

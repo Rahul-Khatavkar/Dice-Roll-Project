@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.18), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.15), transparent 30%),
+        #0b0b14;
+    color: #f8fafc;
+    overflow: hidden;
+}
+
+/* Main Game Card */
+
+.container {
+    width: 420px;
+    max-width: 90%;
+    padding: 40px 35px;
+    background: rgba(21, 21, 34, 0.95);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(139, 92, 246, 0.08);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dice Area */
+
+.dice-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 25px 0;
+}
+
+/* Dice */
+
+.dice-wrapper img {
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35),
+        0 0 20px rgba(139, 92, 246, 0.12);
+}
+
+/* Result */
+
+p {
+    font-size: 20px;
+    margin: 25px 0;
+    font-weight: 600;
+    color: #f8fafc;
+    letter-spacing: 0.5px;
+}
+
+/* Roll Button */
+
+button {
+    background: linear-gradient(135deg, #8b5cf6, #38bdf8);
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 14px 0;
+    width: 170px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.25);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Dice Animation */
+
+.shake {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(30deg) scale(1.05);
+    }
+
+    50% {
+        transform: rotate(-30deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(30deg) scale(1.05);
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 500px) {
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    .dice-wrapper {
+        gap: 20px;
+    }
+
+    .dice-wrapper img {
+        width: 90px;
+        height: 90px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        width: 150px;
+    }
+}
